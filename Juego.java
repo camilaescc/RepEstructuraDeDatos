@@ -7,7 +7,7 @@ import java.util.Random;
  * @fecha:2/4/2025
  */
 
-//se crea la clase Juego
+//se crea la clase Juego modificacion
 public class Juego {
     
     //se crea un metodo vacio lanzarJuego
