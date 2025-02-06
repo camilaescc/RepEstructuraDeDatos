@@ -30,3 +30,4 @@ public class Juego {
         System.out.println("Piedra, papel o tijera: " +randomMano );
     }
 }
+
