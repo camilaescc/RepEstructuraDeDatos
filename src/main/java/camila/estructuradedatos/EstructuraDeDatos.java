@@ -33,7 +33,7 @@ public class EstructuraDeDatos {
         System.out.println("Calificacion final del semestre: " + totalFinal);
         
         String attendanceStatus = objStudentGrades.checkFailureByAbsences(64, 7);
-        System.out.println("Porcentaje de faltas: %" + attendanceStatus);
+        System.out.println(attendanceStatus);
     }
     
 }

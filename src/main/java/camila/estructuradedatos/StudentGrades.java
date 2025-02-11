@@ -32,12 +32,10 @@ public class StudentGrades {
         double attendanceStatus = ((double) absences / totalHours) * 100;
         //se usa if and else para determinar si el alumno esta reprobrado o aprobado
         if (attendanceStatus > 10.0) {
-            System.out.println("Alumno reprobado por faltas");
+            return "Alumno reprobado por faltas";
         } else {
-            System.out.println("Alumno cumple con las asistencias minimas");
-        }
-        //se convierte de double a String para devolver una cadena y se utiliza una funcion Long para redondear el porcentaje de faltas
-        return Long.toString(Math.round(attendanceStatus));
+            return "Alumno cumple con el minimo de faltas";
+        }   
     }
 
 }
