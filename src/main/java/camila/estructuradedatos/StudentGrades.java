@@ -36,7 +36,7 @@ public class StudentGrades {
         } else {
             System.out.println("Alumno cumple con las asistencias minimas");
         }
-        //se convierte de double a String para devolver una cadena
+        //se convierte de double a String para devolver una cadena y utilizo una funcion Long para redondear el porcentaje de faltas
         return Long.toString(Math.round(attendanceStatus));
     }
 
