@@ -5,6 +5,7 @@ package camila.estructuradedatos;
  * @matricula:14523
  * @fecha:2/11/2025
  */
+
 //se crea la clase StudentGrades
 public class StudentGrades {
 
