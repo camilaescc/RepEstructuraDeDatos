@@ -1,5 +1,5 @@
 package camila.estructuradedatos;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /**
  *
@@ -9,6 +9,9 @@ import java.util.Scanner;
 public class EstructuraDeDatos {
 
     public static void main(String[] args) {
+        
+  
+                
         //Promedio
         //Promedio objPromedio= new Promedio();
         //objPromedio.calcularPromedio();
@@ -47,17 +50,25 @@ public class EstructuraDeDatos {
         //objScanner.close();
         
         //CircleArea
-        Scanner objScanner = new Scanner (System.in);
+        //Scanner objScanner = new Scanner (System.in);
         
-        System.out.print("Ingresa el radio de un circulo:");
-        double radius = objScanner.nextDouble(); 
+        //System.out.print("Ingresa el radio de un circulo:");
+        //double radius = objScanner.nextDouble(); 
         
-        CircleArea objCircle = new CircleArea();
-        double area = objCircle.calculateArea(radius);
+        //CircleArea objCircle = new CircleArea();
+        //double area = objCircle.calculateArea(radius);
         
-        System.out.println(String.format("El area de un circulo con un radio de %.2f es de: %.4f", radius, area));
+        //System.out.println(String.format("El area de un circulo con un radio de %.2f es de: %.4f", radius, area));
         
-        objScanner.close();
-    }
+        //objScanner.close();
     
+                
+        ArrayListExample objArrayList = new ArrayListExample();
+        objArrayList.addCars("Mazda");
+        objArrayList.addCars("Chevrolet");
+        objArrayList.removeCar(0);
+        //objArrayList.removeAll();
+        
+        System.out.println( objArrayList.returnSize());
+
 }
