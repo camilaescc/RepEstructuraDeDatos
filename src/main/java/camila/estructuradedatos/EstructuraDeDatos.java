@@ -67,12 +67,10 @@ public class EstructuraDeDatos {
         //objArrayList.addCars("Mazda");
         //objArrayList.addCars("Chevrolet");
         //objArrayList.removeCar(0);
-        //objArrayList.removeAll();
-        
         //System.out.println( objArrayList.returnSize());
         
-        //MultiArrayExample objMultiArrayExample = new MultiArrayExample();
-        //objMultiArrayExample.printbidimensionalArray();
+        MultiArrayExample objMultiArrayExample = new MultiArrayExample();
+        objMultiArrayExample.printbidimensionalArray();
 
         NumArray objNumArray = new NumArray();
         objNumArray.countNumbers();
