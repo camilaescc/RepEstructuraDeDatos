@@ -6,8 +6,9 @@ package camila.estructuradedatos;
  * @fecha:2/17/2025
  */
 
+//se crea la clase MultiArrayExample
 public class MultiArrayExample {
-    //Declaracion e inicializacion de un arreglo 2x2
+    //declaracion e inicializacion de un arreglo 2x2
     public void printbidimensionalArray (){
         int[][] matrix = {
             {1,2}, //[0][0]=1, [0][1]=2
