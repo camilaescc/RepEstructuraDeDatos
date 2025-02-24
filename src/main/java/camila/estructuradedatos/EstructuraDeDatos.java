@@ -72,7 +72,7 @@ public class EstructuraDeDatos {
         //NumArray objNumArray = new NumArray();
         //objNumArray.countNumbers();
         
-        
+        /*
         ArrayListRepaso objLanguage = new ArrayListRepaso();
         
         //se agregan 5 lenguajes de programacion 
@@ -92,7 +92,7 @@ public class EstructuraDeDatos {
         System.out.println("Tamano de la lista: " + objLanguage.returnSize());
         
         //se eliminan todos los lenguajes 
-        objLanguage.clearAllLanguages();
+        objLanguage.clearAllLanguages();/*
         
         
         IVARepaso objIVARepaso = new IVARepaso();
@@ -125,6 +125,29 @@ public class EstructuraDeDatos {
         objScanner.close();
         
         RandomRepaso objRandomRepaso = new RandomRepaso();
-        objRandomRepaso.randomGrades();
+        objRandomRepaso.randomGrades();*/
+        
+        //EXAMEN 1
+        Scanner objScanner = new Scanner(System.in);
+        GradeCalculationPartial objCalificacion = new GradeCalculationPartial();
+
+        //se le pide al usuario ingresar la calificación del examen y de la tarea
+        System.out.print("Examen Parcial: ");
+        double examScore = objScanner.nextDouble();
+        System.out.print("Tareas: ");
+        double homeworkScore = objScanner.nextDouble();
+
+        //se calcula la calificación del parcial
+        double grade = objCalificacion.calculatePartialGrade(examScore, homeworkScore);
+
+        //se imprime la calificación sin redondear
+        System.out.println("Calificacion Final: " + grade);
+
+        objScanner.close();
+      
+        //EXAMEN 2
+        SalesWithDiscount objSalesWithDiscount = new SalesWithDiscount();
+        objSalesWithDiscount.calculateSales();
+        
     }
 }    
