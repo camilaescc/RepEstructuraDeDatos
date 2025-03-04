@@ -7,30 +7,30 @@ package segundoParcial.estructuradedatos;
  */
 
 public class SelectionSortExample {
-    public static int selectionSort(int arr[]) {
+    public static int selectionSort(int[] arr) {
         int n = arr.length;
-        int comparisons = 0; // Contador de comparaciones
+        int comparisons = 0;
 
         for (int i = 0; i < n - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < n; j++) {
-                comparisons++; // Cuenta solo comparaciones
+                comparisons++;
                 if (arr[j] < arr[minIndex]) {
                     minIndex = j;
                 }
             }
-            // Intercambio de elementos
-            int temp = arr[minIndex];
-            arr[minIndex] = arr[i];
-            arr[i] = temp;
-            
-            // Imprimir el estado del arreglo en cada iteración
-            System.out.print("Iteración " + (i + 1) + ": ");
-            for (int num : arr) {
-                System.out.print(num + " ");
+            // Solo intercambiar si encontramos un nuevo mínimo
+            if (minIndex != i) {
+                int temp = arr[i];
+                arr[i] = arr[minIndex];
+                arr[minIndex] = temp;
+             
             }
-            System.out.println();
         }
+
+        System.out.println("Total de comparaciones: " + comparisons);
+       
+        
         return comparisons;
-    }   
+    }
 }
