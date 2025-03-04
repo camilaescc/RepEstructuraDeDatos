@@ -1,4 +1,4 @@
-package camila.estructuradedatos;
+/*package camila.estructuradedatos;
 import java.util.Scanner;
 
 
@@ -7,11 +7,11 @@ import java.util.Scanner;
  * @author milae
  */
 
-public class EstructuraDeDatos {
+/*public class EstructuraDeDatos {
 
     public static void main(String[] args) {
         
-  
+
                 
         //Promedio
         //Promedio objPromedio= new Promedio();
@@ -127,6 +127,7 @@ public class EstructuraDeDatos {
         RandomRepaso objRandomRepaso = new RandomRepaso();
         objRandomRepaso.randomGrades();*/
         
+        /*
         //EXAMEN 1
         Scanner objScanner = new Scanner(System.in);
         GradeCalculationPartial objCalificacion = new GradeCalculationPartial();
@@ -151,3 +152,4 @@ public class EstructuraDeDatos {
         
     }
 }    
+*/
