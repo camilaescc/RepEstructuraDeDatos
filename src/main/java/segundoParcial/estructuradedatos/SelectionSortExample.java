@@ -28,7 +28,7 @@ public class SelectionSortExample {
             }
         }
 
-        System.out.println("Total de comparaciones: " + comparisons);
+        System.out.println("Operaciones realizadas: " + comparisons);
        
         
         return comparisons;
