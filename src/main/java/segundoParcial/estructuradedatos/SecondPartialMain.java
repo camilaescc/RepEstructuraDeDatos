@@ -40,6 +40,7 @@ public class SecondPartialMain {
         SecuencialAlgoritm.searchNum(array);
         */
         
+        /*
         //BinarySearch
         BinarySearch objBinary = new BinarySearch();
         int number = 7; // Número a buscar
@@ -66,6 +67,11 @@ public class SecondPartialMain {
         // Mostrar calificaciones después de la eliminación
         System.out.println("\nCalificaciones después de eliminar a Pedro:");
         example.displayGrades();
+        */
+        
+        //IndexedSearch
+        IndexedSearch search = new IndexedSearch();
+        IndexedSearch.main(args);
     }
 }
 

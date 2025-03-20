@@ -1,13 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package segundoParcial.estructuradedatos;
 
 /**
- *
- * @author milae
+ * @author:CamilaEscobedo
+ * @matricula:14523
+ * @fecha:3/14/2025
  */
+
 public class BinarySearch {
     private int[] sortedArray = {1, 3, 5, 7, 9, 11, 13, 15}; // Arreglo ordenado
 

@@ -1,15 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package segundoParcial.estructuradedatos;
+import java.util.HashMap;
 
 /**
- *
- * @author milae
+ * @author:CamilaEscobedo
+ * @matricula:14523
+ * @fecha:3/19/2025
  */
-// HashMapExample.java
-import java.util.HashMap;
 
 public class HashMap {
 
