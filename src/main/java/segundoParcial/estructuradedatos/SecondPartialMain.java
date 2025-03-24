@@ -1,7 +1,6 @@
 package segundoParcial.estructuradedatos;
 import java.util.Scanner;
 
-
 public class SecondPartialMain {
 
     public static void main(String[] args) {

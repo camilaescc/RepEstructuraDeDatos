@@ -1,10 +1,11 @@
 package segundoParcial.estructuradedatos;
 
-
 /**
- *
- * @author milae
+ * @author:CamilaEscobedo
+ * @matricula:14523
+ * @fecha:3/08/2025
  */
+
 public class SecuencialAlgoritm {
     //se crea el metodo selectionSort que recibe un array de tipo int
     public static int seatchNum(int[] arr) {
