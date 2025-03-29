@@ -3,43 +3,52 @@ package segundoParcial.estructuradedatos;
 /**
  * @author:CamilaEscobedo
  * @matricula:14523
- * @fecha:3/20/2025
+ * @fecha:3/24/2025
  */
 
+//se crea la clase IndexedSearch
 public class IndexedSearch {
-    public static void main(String[] args) {
-        int[] datos = {10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80};
-        int[] indices = {0, 4, 8, 12}; // Índices auxiliares
-        int buscar = 45;
-        
+
+    //se crea el metodo searchTarget
+    public static void searchTarget(int[] array, int[] index, int target) {
+        //se inicializa un contador de comparaciones en 0
         int comparaciones = 0;
         int bloque = -1;
-        
-        // Búsqueda en el índice
-        for (int i = 0; i < indices.length - 1; i++) {
+
+        //se crea un ciclo for para buscar buscar el index
+        for (int i = 0; i < index.length - 1; i++) {
             comparaciones++;
-            if (datos[indices[i]] <= buscar && datos[indices[i + 1]] >= buscar) {
+            if (array[index[i]] <= target && array[index[i + 1]] >= target) {
                 bloque = i;
                 break;
             }
         }
-        
+
+        //se verifica si el elemento podria estar en el ultimo bloque
+        if (bloque == -1 && array[index[index.length - 1]] <= target) {
+            bloque = index.length - 1;
+        }
+
+        //se crea un if por si no se encuentra un elemento valido
         if (bloque == -1) {
             System.out.println("Elemento no encontrado.");
             System.out.println("Comparaciones realizadas: " + comparaciones);
             return;
         }
-        
-        // Búsqueda secuencial dentro del bloque identificado
-        for (int i = indices[bloque]; i <= indices[bloque + 1]; i++) {
+
+        //se definen los limites del bloque
+        int inicio = index[bloque];
+        int fin = (bloque == index.length - 1) ? array.length - 1 : index[bloque + 1];
+
+        //se crea un ciclo for para inciar una busqyeda secuencial dentro del bloque identificado
+        for (int i = inicio; i <= fin; i++) {
             comparaciones++;
-            if (datos[i] == buscar) {
-                System.out.println("Elemento encontrado en la posición: " + i);
+            if (array[i] == target) {
+                System.out.println("Elemento encontrado en la posicion: " + i);
                 System.out.println("Comparaciones realizadas: " + comparaciones);
                 return;
             }
         }
-        
         System.out.println("Elemento no encontrado.");
         System.out.println("Comparaciones realizadas: " + comparaciones);
     }

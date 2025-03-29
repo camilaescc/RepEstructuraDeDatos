@@ -1,12 +1,13 @@
 package segundoParcial.estructuradedatos;
-import java.util.Scanner;
+import static segundoParcial.estructuradedatos.BinarySearch.search;
+
 
 public class SecondPartialMain {
 
     public static void main(String[] args) {
-        
-        //InsertionSort
         /*
+        //InsertionSort
+        
         System.out.println("InsertionSort:");
         int peorCaso[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
         
@@ -16,62 +17,86 @@ public class SecondPartialMain {
         
         
         //SelectionSort
+        
         System.out.println("\nSelectionSort:");
         int worstCase[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1}; 
       
         System.out.println("Peor Caso");
         SelectionSortExample.selectionSort(worstCase);
         
-
                 
         //BubbleSort
-        System.out.println("\nBubbleSort:");
         
+        System.out.println("\nBubbleSort:");        
         int[] arr = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1}; // Peor caso (orden inverso)
+        
         System.out.println("Peor Caso ");
         int comparisons = BubbleSortExample.bubbleSort(arr);
+              
         
-        //SecuencialAlgoritm
-        System.out.println("\Algoritmo Secuencial:");
+        //SecuencialAlgoritm 
+        
         int array[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1}; 
-      
-        System.out.println("Posicion en la que se encontro");
-        SecuencialAlgoritm.searchNum(array);
-        */
+        SecuencialAlgorithm.searchNum(array);
         
-        /*
+        
         //BinarySearch
-        BinarySearch objBinary = new BinarySearch();
-        int number = 7; // Número a buscar
-
-        objBinary.binarySearch(number); // Llamada al método
         
-        HashMap example = new HashMap();
-
-        // Agregar estudiantes y calificaciones
-        example.addGrade("Juan", 85);
-        example.addGrade("Maria", 90);
-        example.addGrade("Pedro", 78);
-
-        // Mostrar calificaciones
-        System.out.println("Calificaciones:");
-        example.displayGrades();
-
-        // Obtener calificación de un estudiante
-        System.out.println("\nCalificación de Maria: " + example.getGrade("Maria"));
-
-        // Eliminar un estudiante
-        example.removeStudent("Pedro");
-
-        // Mostrar calificaciones después de la eliminación
-        System.out.println("\nCalificaciones después de eliminar a Pedro:");
-        example.displayGrades();
-        */
+        int[] array = {10, 20, 30, 40, 50};
+        int result = search(array, 30);
+        System.out.println("BinarySearch");
+        System.out.println("El numero 30 esta en la posicion: " + result);
+        
+        
+        //HashMap
+        
+        ExampleHashMap hashMap = new ExampleHashMap();
+        hashMap.runHashMap(); 
+        
         
         //IndexedSearch
-        IndexedSearch search = new IndexedSearch();
-        IndexedSearch.main(args);
+
+        int[] array = {10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80};
+        int[] index = {0, 4, 8, 12}; 
+        int target = 45;
+        System.out.println("Indexed Search");
+        System.out.println("Elemento a buscar:" + target);
+        IndexedSearch.searchTarget(array, index, target);
+        
+        
+        //LinearSearch
+
+        int[] array = {10, 20, 30, 40, 50, 60, 70, 80, 90};
+        int target = 50;
+        int index = LinearSearch.findValue(array, target);
+        System.out.println("Linear Search");
+        System.out.println("Elemnto a buscar:" + target);
+        if (index != -1) {
+            System.out.println("Elemento encontrado en la posicion: " + index);
+        } else {
+            System.out.println("Elemento no encontrado.");
+        }
+        
+        */
+        
+        //MergeSort
+
+        int[] array = {82, 43, 38, 27, 10, 9, 3};
+        System.out.println("Merge Sort");
+        System.out.println("\nArray Inicial:");
+        printArray(array);
+        int comparisons = MergeSortExample.mergeSort(array);
+        System.out.println("\nArray Ordenado:");
+        printArray(array);
+        System.out.println("Numero de comparaciones realizadas: " + comparisons);
     }
+    public static void printArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        
+    }  
 }
 
         
