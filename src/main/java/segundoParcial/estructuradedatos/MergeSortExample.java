@@ -1,77 +1,67 @@
 package segundoParcial.estructuradedatos;
 
 /**
- * @author:CamilaEscobedo
- * @matricula:14523
- * @fecha:3/27/2025
+ * @author: Camila Escobedo
+ * @matricula: 14523
+ * @fecha: 3/27/2025
  */
 
-//se crea la clase MergeSortExample
+// Se crea la clase MergeSortExample
 public class MergeSortExample {
 
-    //se crea el metodo mergeSort que realiza el algortmo y cuenta las comparaciones
-    public static int mergeSort(int[] array) {
-        int[] tempArr = new int[array.length];  
-        //se crea un array temporal para la mezcla
-        return mergeSortHelper(array, tempArr, 0, array.length - 1);
-    }
+    // Se crea el método mergeSort que realiza el algoritmo y cuenta las comparaciones
+    public  void mergeSort(int[] array) {
+        int length = array.length;
+        if (length <= 1) return; // Caso base
 
-    //se crea el metodo mergeSortHelper que ordena y cuenta las compraciones
-    private static int mergeSortHelper(int[] arr, int[] tempArr, int left, int right) {
-        //se inicializa un contador de comparaciones en cero
-        int comparisons = 0;
-        if (left < right) {
-            int mid = (left + right) / 2;
+        int middle = length / 2;
+        int[] leftArray = new int[middle];
+        int[] rightArray = new int[length - middle];
 
-            //se divide el array en dos mitades
-            comparisons += mergeSortHelper(arr, tempArr, left, mid);
-            comparisons += mergeSortHelper(arr, tempArr, mid + 1, right);
+        int i = 0; // Left array
+        int j = 0; // Right array
 
-            //se mezclan las dos mitades 
-            comparisons += merge(arr, tempArr, left, mid, right);
-        }
-        return comparisons;
-    }
-
-    //se crea un metodo para mezclar las mitades
-    private static int merge(int[] arr, int[] tempArr, int left, int mid, int right) {
-        int comparisons = 0;
-        int n1 = mid - left + 1;
-        int n2 = right - mid;
-
-        //se copian los datos de los array temporales
-        System.arraycopy(arr, left, tempArr, left, n1);
-        System.arraycopy(arr, mid + 1, tempArr, mid + 1, n2);
-
-        //se mexclan los arrays temporales
-        int i = left, j = mid + 1, k = left;
-        while (i <= mid && j <= right) {
-            //se ceuntan las comparaciones
-            comparisons++;  
-            if (tempArr[i] <= tempArr[j]) {
-                arr[k] = tempArr[i];
-                i++;
+        for (; i < length; i++) {
+            if (i < middle) {
+                leftArray[i] = array[i];
             } else {
-                arr[k] = tempArr[j];
+                rightArray[j] = array[i];
                 j++;
             }
-            k++;
         }
-
-        //si hay elementos restantes en la izquierda, se cuentan
-        while (i <= mid) {
-            arr[k] = tempArr[i];
-            i++;
-            k++;
-        }
-
-        //si hay elementos restantes en la derecha, se cuentan
-        while (j <= right) {
-            arr[k] = tempArr[j];
-            j++;
-            k++;
-        }
-
-        return comparisons;
+        mergeSort(leftArray);
+        mergeSort(rightArray);
+        merge(leftArray, rightArray, array);
     }
+
+    private static void merge(int[] leftArray, int[] rightArray, int[] array) {
+        int leftSize = array.length / 2;
+        int rightSize = array.length - leftSize;
+        int i = 0, l = 0, r = 0; // Índices
+
+        // Check the conditions for merging
+        while (l < leftSize && r < rightSize) {
+            if (leftArray[l] < rightArray[r]) {
+                array[i] = leftArray[l];
+                i++;
+                l++;
+            } else {
+                array[i] = rightArray[r];
+                i++;
+                r++;
+            }
+        }
+        while (l < leftSize) {
+            array[i] = leftArray[l];
+            i++;
+            l++;
+        }
+        while (r < rightSize) {
+            array[i] = rightArray[r];
+            i++;
+            r++;
+        }
+    }
+
+  
 }

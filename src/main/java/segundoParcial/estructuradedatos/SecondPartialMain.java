@@ -1,5 +1,8 @@
 package segundoParcial.estructuradedatos;
-import static segundoParcial.estructuradedatos.BinarySearch.search;
+//import static segundoParcial.estructuradedatos.BinarySearch.search;
+
+
+
 
 
 public class SecondPartialMain {
@@ -33,17 +36,19 @@ public class SecondPartialMain {
         System.out.println("Peor Caso ");
         int comparisons = BubbleSortExample.bubbleSort(arr);
               
-        
+        */
         //SecuencialAlgoritm 
         
-        int array[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1}; 
-        SecuencialAlgorithm.searchNum(array);
+        int[] datos = {10, 20, 30, 40, 50};
+        int resultado = SecuencialAlgorithm.searchNum(datos, 30);
+        System.out.println("El numero 30 esta en la posicion: " + resultado);
         
-        
+        /*
         //BinarySearch
         
         int[] array = {10, 20, 30, 40, 50};
-        int result = search(array, 30);
+         
+        int result = BinarySearch.search(array, 30);
         System.out.println("BinarySearch");
         System.out.println("El numero 30 esta en la posicion: " + result);
         
@@ -77,26 +82,38 @@ public class SecondPartialMain {
             System.out.println("Elemento no encontrado.");
         }
         
-        */
         
         //MergeSort
 
-        int[] array = {82, 43, 38, 27, 10, 9, 3};
-        System.out.println("Merge Sort");
-        System.out.println("\nArray Inicial:");
-        printArray(array);
-        int comparisons = MergeSortExample.mergeSort(array);
-        System.out.println("\nArray Ordenado:");
-        printArray(array);
-        System.out.println("Numero de comparaciones realizadas: " + comparisons);
-    }
-    public static void printArray(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println();
+        int[] array = {8, 2, 5, 3, 4, 7, 6, 1};
         
+        MergeSortExample objMerge = new MergeSortExample();
+        objMerge.mergeSort(array);
+        
+        for(int i = 0; i < array.length; i++){
+            System.out.print(array[i]+ " ");
+        }
+        
+        
+        //QuickSort
+        
+        int[] array = {8, 2, 5, 3, 9, 4, 7, 6, 1};
+        
+        QuickSortExample objQuick = new QuickSortExample();
+        objQuick.quickSort(array, 0, array.length - 1);
+        
+
+        
+        for(int i : array){
+            System.out.print(i + " ");
+        }
+        */
     }  
+
+    private static int search(int[] array, int i) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+           
 }
 
         
