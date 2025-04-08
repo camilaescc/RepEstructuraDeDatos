@@ -8,14 +8,15 @@ public class tercerParcialMain {
         list.insert(20);
         list.insert(30);
 
-        System.out.println("List:");
+        // Mostrar la lista actual
+        System.out.println("Lista original:");
         list.display();
 
-        System.out.println("Is 20 in the list? " + list.search(20));
+        // Agregar un nuevo valor
+        list.insert(40);
 
-        list.delete(20);
-
-        System.out.println("After deleting 20:");
+        // Mostrar la lista después de insertar
+        System.out.println("Despues de insertar 40:");
         list.display();
     }
 }
