@@ -79,6 +79,7 @@ public class tercerParcialMain {
         
         
         //ArbolExample
+        System.out.println("Arbol Example");
         ArbolBinario arbol = new ArbolBinario();
 
         // Insertar elementos en el árbol
@@ -98,9 +99,31 @@ public class tercerParcialMain {
         if (arbol.buscar(buscarValor)) {
             System.out.println("El valor " + buscarValor + " SI se encuentra en el arbol.");
         } else {
-            System.out.println("El valor " + buscarValor + " NO se encuentra en el arbol.");
-        
+            System.out.println("El valor " + buscarValor + " NO se encuentra en el arbol.");            
     }
+        
+        //GrafoExample
+        System.out.println("Grafo Example");
+        Grafo grafo = new Grafo();
+
+        // Agregar vértices
+        grafo.agregarVertice("A");
+        grafo.agregarVertice("B");
+        grafo.agregarVertice("C");
+        grafo.agregarVertice("D");
+        grafo.agregarVertice("E");
+
+        // Agregar aristas
+        grafo.agregarArista("A", "B");
+        grafo.agregarArista("A", "C");
+        grafo.agregarArista("B", "D");
+        grafo.agregarArista("C", "E");
+
+        // Mostrar grafo
+        grafo.mostrarGrafo();
+
+        // Recorrido BFS desde el vértice A
+        grafo.bfs("A");
 }
 }
 
