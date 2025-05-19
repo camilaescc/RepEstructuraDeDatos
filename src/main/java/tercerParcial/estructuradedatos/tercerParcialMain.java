@@ -19,6 +19,7 @@ public class tercerParcialMain {
         System.out.println("Despues de insertar 40:");
         list.display();
         
+        
         //DobleLinkedList
         System.out.println("DobleLinkedList Example");
         DoubleLinkedList lista = new DoubleLinkedList();
@@ -32,7 +33,7 @@ public class tercerParcialMain {
 
         lista.eliminar(20);        // Elimina el nodo con valor 20
         lista.mostrarAdelante();   // Salida: 5 10 30
-        */
+        
        
         //CircularList
         CircularLinkedList lista = new CircularLinkedList();
@@ -43,8 +44,7 @@ public class tercerParcialMain {
 
         lista.mostrar();
         
-        
-        /*
+
         //PilaExample
         System.out.println("Pila Example");
         PilaExample pila = new PilaExample();
@@ -78,6 +78,29 @@ public class tercerParcialMain {
         */
         
         
+        //ArbolExample
+        ArbolBinario arbol = new ArbolBinario();
+
+        // Insertar elementos en el árbol
+        arbol.insertar(50);
+        arbol.insertar(30);
+        arbol.insertar(70);
+        arbol.insertar(20);
+        arbol.insertar(40);
+        arbol.insertar(60);
+        arbol.insertar(80);
+
+        System.out.println("Recorrido in-order del arbol:");
+        arbol.inOrden();  // Debería mostrar: 20 30 40 50 60 70 80
+
+        // Buscar valores
+        int buscarValor = 40;
+        if (arbol.buscar(buscarValor)) {
+            System.out.println("El valor " + buscarValor + " SI se encuentra en el arbol.");
+        } else {
+            System.out.println("El valor " + buscarValor + " NO se encuentra en el arbol.");
+        
     }
+}
 }
 
