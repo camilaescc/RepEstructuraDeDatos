@@ -6,30 +6,30 @@ package tercerParcial.estructuradedatos;
  * @fecha:5/13/2025
  */
 
-class Nodo {
+class Nodo2 {
     int dato;
-    Nodo siguiente;
+    Nodo2 siguiente;
 
-    public Nodo(int dato) {
+    public Nodo2(int dato) {
         this.dato = dato;
         this.siguiente = null;
     }
 }
 
 class CircularLinkedList {
-    private Nodo cabeza = null;
-    private Nodo cola = null;
+    private Nodo2 cabeza = null;
+    private Nodo2 cola = null;
 
     // Agregar nodo al final
     public void agregar(int dato) {
-        Nodo nuevoNodo = new Nodo(dato);
+        Nodo2 nuevoNodo2 = new Nodo2(dato);
         if (cabeza == null) {
-            cabeza = nuevoNodo;
-            cola = nuevoNodo;
+            cabeza = nuevoNodo2;
+            cola = nuevoNodo2;
             cola.siguiente = cabeza; // Hacer circular
         } else {
-            cola.siguiente = nuevoNodo;
-            cola = nuevoNodo;
+            cola.siguiente = nuevoNodo2;
+            cola = nuevoNodo2;
             cola.siguiente = cabeza; // Hacer circular
         }
     }
@@ -41,7 +41,7 @@ class CircularLinkedList {
             return;
         }
 
-        Nodo actual = cabeza;
+        Nodo2 actual = cabeza;
         do {
             System.out.print(actual.dato + " -> ");
             actual = actual.siguiente;
