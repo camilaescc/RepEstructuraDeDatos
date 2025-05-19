@@ -1,8 +1,9 @@
 package tercerParcial.estructuradedatos;
 
 /**
- *
- * @author milae
+ * @author:CamilaEscobedo
+ * @matricula:14523
+ * @fecha:5/18/2025
  */
 
 class NodoArbol {
